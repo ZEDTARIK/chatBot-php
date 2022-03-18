@@ -1,3 +1,4 @@
 // get elements 
-sendBtn = document.getElementById('sendBtn');
-textBox = document.getElementById('textBox');
+var sendBtn = document.getElementById('sendBtn');
+var textBox = document.getElementById('textBox');
+var chatContainer = document.getElementById('chatContainer');
