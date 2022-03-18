@@ -17,7 +17,7 @@ function chatBotMessage(MessageText) {
     messageElement.innerHTML = "<span>Chat: </span>" +
         "<span style=" + "margin-top: 10px; padding: 10px;" + ">" + MessageText + "</span>";
 
-        chatContainer.appendChild(messageElement);
+    chatContainer.appendChild(messageElement);
 
 }
 // function sendMessage
@@ -33,11 +33,14 @@ function sendMessage(MessageText) {
     messageElement.innerHTML = "<span>You: </span>" +
         "<span style=" + "margin-top: 10px; padding: 10px;" + ">" + MessageText + "</span>";
 
-        chatContainer.appendChild(messageElement);
+    chatContainer.appendChild(messageElement);
 }
 
 sendBtn.addEventListener('click', function () {
 
-    let MessageText = textBox.value;
-    sendMessage(MessageText);
+    if (textBox.value !== "") {
+        let MessageText = textBox.value;
+        sendMessage(MessageText);
+        textBox.value = "";
+    }
 });
