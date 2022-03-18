@@ -33,6 +33,17 @@ function sendMessage(MessageText) {
     messageElement.innerHTML = "<span>You: </span>" +
         "<span style=" + "margin-top: 10px; padding: 10px;" + ">" + MessageText + "</span>";
 
+
+    // add animation 
+    messageElement.animate([{
+        easing: "ease-in",
+        opacity: 0.4
+    }, {
+        opacity: 1
+    }], {
+        duration: 3000
+    });
+    // apend Text 
     chatContainer.appendChild(messageElement);
 }
 
